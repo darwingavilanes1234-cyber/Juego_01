@@ -1,0 +1,11 @@
+import random
+# Lista de opciones válidas
+opciones = ["piedra", "papel", "tijera"]
+print("=== JUEGO PIEDRA, PAPEL O TIJERA ===")
+print("Opciones: piedra, papel, tijera")
+# Leer elección del jugador
+jugador = input("Elige una opción: ").lower()
+# Validar la opción
+while jugador not in opciones:
+    print("Error: opción no válida. Intenta otra vez.")
+    jugador = input("Elige piedra, papel o tijera: ").lower()
