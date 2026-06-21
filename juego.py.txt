@@ -9,3 +9,21 @@ jugador = input("Elige una opción: ").lower()
 while jugador not in opciones:
     print("Error: opción no válida. Intenta otra vez.")
     jugador = input("Elige piedra, papel o tijera: ").lower()
+import random
+# Validar la opción
+while jugador not in opciones:
+    print("Error: opción no válida. Intenta otra vez.")
+    jugador = input("Elige piedra, papel o tijera: ").lower()
+# Generar elección aleatoria de la computadora
+computadora = random.choice(opciones)
+print(f"\nJugador eligió: {jugador}")
+print(f"Computadora eligió: {computadora}")
+# Comparar jugadas y mostrar resultado
+if jugador == computadora:
+    print("Resultado: EMPATE")
+elif (jugador == "piedra" and computadora == "tijera") or \
+     (jugador == "papel" and computadora == "piedra") or \
+     (jugador == "tijera" and computadora == "papel"):
+    print("Resultado: GANA EL JUGADOR")
+else:
+    print("Resultado: GANA LA COMPUTADORA")
