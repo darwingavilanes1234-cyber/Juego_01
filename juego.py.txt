@@ -9,11 +9,6 @@ jugador = input("Elige una opción: ").lower()
 while jugador not in opciones:
     print("Error: opción no válida. Intenta otra vez.")
     jugador = input("Elige piedra, papel o tijera: ").lower()
-import random
-# Validar la opción
-while jugador not in opciones:
-    print("Error: opción no válida. Intenta otra vez.")
-    jugador = input("Elige piedra, papel o tijera: ").lower()
 # Generar elección aleatoria de la computadora
 computadora = random.choice(opciones)
 print(f"\nJugador eligió: {jugador}")
